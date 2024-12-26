@@ -73,7 +73,20 @@ console.log(getNameMaxMinAge(people));
 
 //misol-4
 //Objectda turli xil kalitlar bir xil qiymatlarga ega, kalitlari o'sha qiymatlardan iborat shunday object tuzingki, bu objectning qiymatlari massiv ko'rinishidagi eski objectning kalitlarlaridan iborat bo'lsin.
+/*
+const obj = { 1: 20, 2: 30, 3: 20, 4: 40, 5: 30, 6: 50, 7: 40, 8: 20 };
+const keyObj = {};
 
+for (let key in obj) {
+  if (!keyObj[obj[key]]) {
+    keyObj[obj[key]] = [key];
+  } else {
+    keyObj[obj[key]].push(key);
+  }
+}
+
+console.log(keyObj);
+*/
 //misol-5
 //Ikkita object berilgan ularning ba'zi kalitlari bir xil. Bir xil kalitlaridan iborat bo'lmagan yangi object hosil qiling.
 /*
@@ -142,4 +155,125 @@ for (let i in fruits) {
   price += fruits[i];
 }
 console.log(price);
+*/
+
+//new yangi obect(bosh obj)
+
+//uy ishi -2
+//misol-11
+//Object kalitlarining barchasi string toifasidagi ma’lumotlardan tuzilgan bo’lsa true, aks holda false qiymat qaytaruvchi defineObject nomli funksiya hosil qiling. (Object.keys())
+/*
+const obj = { abc: 1, 123: 2, d: 5 };
+
+function defineObject(obj) {
+  for (let key in obj) {
+  }
+*/
+
+//misol-12
+//Agar object qiymatlari ichida falsy qiymatlar bo’lsa, ularni o’chirib yangi object hosil qiling. (Object.keys())
+/*
+const answer = {};
+function falsyValue(obj) {
+  for (let key in obj) {
+    if (obj[key]) {
+      answer[key] = obj[key];
+    }
+  }
+  return answer;
+}
+
+console.log(falsyValue({ a: false, b: 12, c: true, d: 0 }));
+*/
+
+//misol-13
+//Bir necha takrorlanuvchi sonlar ishtirok etgan massivdan shunday obyekt hosil qilingki, bu object kalitlari massivning takrorlanmas sonlaridan, qiymatlari esa o’sha sonlarning massivda necha marta ishtirok etganidan tuzilgan bo’lsin. (for)
+//Input: [ 7, 8, 4, 5, 7, 5, 4, 8, 5, 4, 7, 9 ]
+//Output: { 7: 3, 8: 2, 4: 3, 5: 3, 9: 1 }
+
+//misol-14
+//Uzun sondan shunday obyekt hosil qilingki, bunda object kalitlari sinflardan, qiymatlari esa o’sha sonning mos ravishdagi o’sha sinfdagi qiymatlaridan tuzilgan bo’lsin. (for, slice)
+//Input: 8945472985629;
+//Output: { birlar: 629, minglar: 985, millionlar: 472, milliardlar: 945, trilionlar: 8 }
+
+//misol-15
+//Quyidagi ko'rinishda objectlarlardan tuzilgan massiv beriladi. Agar alreadyRead propertysi true bo'lsa o'sha kitob o'qigan deb chiqarilsin, aks holda o'qilmagan.
+//Input: 8945472985629;
+//Output: { birlar: 629, minglar: 985, millionlar: 472, milliardlar: 945, trilionlar: 8 }
+/*
+function book(read){
+const answer = book.alreadyRead 
+}
+*/
+
+//misol-16
+//Mahsulotlar massividagi objectlarni sonini, chegirmasini hisobga olib, umumiy summani hisoblang.
+/*
+let overall = 0;
+function calculator(product) {
+  for (let i = 0; i < product.length; i++) {
+    let;
+  }
+}
+*/
+
+//misol-17
+//Objectning kalitlaridan va qiymatlaridan iborat bo'lgan massiv tuzing.
+/*
+const obj = {
+  it: 20,
+  mushuk: 10,
+  sigir: 200,
+  tovuq: 2,
+};
+
+const answer = [];
+function array(obj) {
+  for (let key in obj) {
+    answer.push(key, obj[key]);
+  }
+  return answer;
+}
+
+console.log(array(obj));
+*/
+
+//misol-18
+//GPA ni hisoblovchi dastur tuzing.
+//GPA = (grade1 * kredit1 + grade2 * kredit2 + ...) / (kredit1 + kredit2 + ...)
+/*
+let grade = 0;
+let krefdit = 0;
+
+function calculator (gpa) {
+for(let )
+}
+
+//output:
+const grades = [
+  { name: "Fizika", grade: 4, kredit: 6 },
+  { name: "Matematika", grade: 5, kredit: 6 },
+  { name: "Tarix", grade: 4, kredit: 4 },	
+  { name: "Dasturlash", grade: 5, kredit: 8 },
+  { name: "Kibrxavfsizlik", grade: 4, kredit: 8 },
+];
+console.log(calculator(gpa));
+*/
+
+//misol-19
+//Abdulaziz Programmer nechta to'g'ri va noto'g'ri javob topganligini toping.
+
+//misol-20
+// Qiymatlari sonlardan iborat obj nomli object berilgan. Qiymatlarini n martaga oshiruvchi getMultipleValues(n) nomli funksiya yozing.
+/*
+let obj2 = { a: 2, b: 3, c: 4, d: 6 };
+let answer = {};
+
+function getMultipleValues(n, obj) {
+  for (let key in obj) {
+    answer[key] = obj[key] * n;
+  }
+  return answer;
+}
+console.log(getMultipleValues(3, obj2));
 */
